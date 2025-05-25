@@ -1,0 +1,130 @@
+/* Basic CSS Structure */
+
+:root {
+    /* Define global variables here */
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.employeeBtn{
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-color: transparent;
+}
+
+.employeeBtn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-color: transparent;
+}
+
+.employeeBtn:active{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-color: transparent;
+}
+
+.adminBtn{
+    background-color: rgb(255, 55, 41);
+    color: white;
+    border-color: transparent;
+}
+
+.adminBtn:hover{
+    background-color: rgb(255, 22, 22);
+    color: white;
+    border-color: transparent;
+}
+
+.adminBtn:active{
+    background-color: rgb(255, 22, 22);
+    color: white;
+    border-color: transparent;
+}
+
+.itBtn{
+    background-color: rgb(255, 162, 0);
+    color: rgb(0, 0, 0);
+    border-color: transparent;
+}
+
+.itBtn:hover{
+    background-color: rgb(255, 132, 0);
+    color: rgb(0, 0, 0);
+    border-color: transparent;
+}
+
+.itBtn:active, .itBtn:focus{
+    background-color: rgb(255, 132, 0);
+    color: rgb(0, 0, 0);
+    border-color: transparent;
+}
+
+.modalAdd{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust the width as needed */
+}
+
+.modal-body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"]{
+    border: 0.5px solid rgb(177, 177, 177);
+}
+
+textarea,
+select{
+    border: 0.5px solid rgb(177, 177, 177);
+}
+
+.errorThis{
+    border-color: crimson;
+}

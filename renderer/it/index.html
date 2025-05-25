@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It Dashboard</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="it.css">
+  <script src="index.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="text-center align-items-center m-1">
+  <nav>
+    <button onclick="logout()" class="btn btn-secondary">Logout</button>
+  </nav>
+  <h1>Welcome IT</h1>
+  <div class="container">
+    <button onclick="goTo('users')" class="btn">Manage Users</button>
+    <button onclick="goTo('transactions')" class="btn">Manage Transactions</button>
+  </div>
+</body>
+</html>

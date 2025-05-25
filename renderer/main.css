@@ -1,0 +1,17 @@
+.formThis label{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.formDes{
+    width: 40%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr;
+    grid-gap: 10px;
+}

@@ -1,0 +1,25 @@
+<!-- renderer/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login - Finance App</title>
+    <script src="renderer.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="text-center justify-content-center align-items-center">
+    <h1>Login</h1>
+    <form id="loginForm" class="formThis">
+      <div class="formDes">
+        <label>Username:</label>
+        <input type="text" id="username" required>
+        <label>Password:</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit" class="btn btn-success mt-3">Login</button>
+    </form>
+    <p id="error" style="color: red;"></p>
+  </body>
+</html>

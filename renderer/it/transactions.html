@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It Dashboard</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="it.css">
+    <script src="transactions.js"></script>
+    <script src="../globalScript/sweetalert.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="text-center align-items-center m-1">
+    
+    <nav>
+        <button onclick="goBack()" class="btn btn-secondary">Go Back</button>
+    </nav>
+    <h1>Transaction Track</h1>
+    <button id="addTransactionBtn" class="btn btn-primary">Add Transaction</button>
+    <div class="container mt-1">
+        <div id="transactionList" class="align-items-center text-center">
+        </div>
+
+    </div>
+
+    <div class="modal modalAdd" tabindex="-1" role="dialog" id="addTransactionModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add new transaction</h5>
+                    </button>
+                </div>
+                <form id="transactionForm">
+                    <div class="modal-body">
+                        <label for="addAmount">Amount</label>
+                        <input type="number" id="addAmount" class="form-control" placeholder="" required>
+                        <label for="addType">Tpye</label>
+                        <select id="addType" class="form-control">
+                            <option value="0" disabled selected>Select Type</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        <label for="addCategory">Category</label>
+                        <select id="addCategory" class="form-select" required>
+                        </select>
+                        <label for="addDate">Date</label>
+                        <input type="date" id="addDate" class="form-control" required>
+                        <label for="addNote">Note</label>
+                        <textarea id="addNote" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="saveTransactionBtn" type="submit" class="btn btn-primary">Save changes</button>
+                        <button id="cancelTransactionbtn" onclick="cancelTransaction()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
