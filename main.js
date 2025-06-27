@@ -21,7 +21,6 @@ function createWindow() {
     },
   });
   mainWindow.loadFile(path.join(__dirname, 'renderer', 'index.html'));
-  mainWindow.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
@@ -88,7 +87,15 @@ ipcMain.handle('delete-user', (event, userId) => {
 
 // Get all transactions
 ipcMain.handle('get-all-transactions', () => {
-  return db.prepare('SELECT * FROM transactions').all();
+  return db.prepare(`
+    SELECT
+      transactions.*,
+      users.username
+    FROM
+      transactions
+    INNER JOIN
+      users ON transactions.user_id = users.id
+    `).all();
 });
 
 // Get Transaction Specific

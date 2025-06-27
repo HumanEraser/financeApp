@@ -4,21 +4,17 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electron . --dev"
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A desktop finance app built with Electron and SQLite",
   "dependencies": {
     "better-sqlite3": "^11.9.1",
     "cors": "^2.8.5",
     "electron": "^36.0.1",
     "express": "^5.1.0"
-  },
-  "devDependencies": {
-    "electron-rebuild": "^3.2.9"
   }
 }
-
-
